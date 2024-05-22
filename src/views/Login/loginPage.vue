@@ -6,7 +6,7 @@ import LayoutHeader from "../Layout/components/LayoutHeader.vue";
   <LayoutHeader></LayoutHeader>
   <div class="login">
     <main>
-      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <div class="wrapper">
         <div class="card-switch">
           <label class="switch">
@@ -15,7 +15,7 @@ import LayoutHeader from "../Layout/components/LayoutHeader.vue";
             <span class="card-side"></span>
             <div class="flip-card__inner">
               <div class="flip-card__front">
-                <div class="title"><img src="./img/logo.png" alt="" /></div>
+                <div class="title"><img src="../Layout/img/logo.png" alt="" /></div>
                 <form action="" class="flip-card__form">
                   <input
                     type="account"
@@ -81,7 +81,7 @@ import LayoutHeader from "../Layout/components/LayoutHeader.vue";
                 </form>
               </div>
               <div class="flip-card__back">
-                <div class="title"><img src="./img/logo.png" alt="" /></div>
+                <div class="title"><img src="../Layout/img/logo.png" alt="" /></div>
                 <form action="" class="flip-card__form">
                   <input
                     type="name"

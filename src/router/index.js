@@ -18,7 +18,7 @@ const router = createRouter({
     {//首頁
       path:'/',
       component:Layout,
-    },{//登錄頁
+    },{//登入頁
       path:'/login',
       component:Login
     },{//關於頁
