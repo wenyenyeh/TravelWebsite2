@@ -1,0 +1,610 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+
+}
+
+
+/* 修改body得預設字體 */
+body {
+  font-family:
+      /* 1 */
+      -apple-system, BlinkMacSystemFont,
+      /* 2 */
+      "Microsoft JhengHei", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      /* 3 */
+      "Helvetica Neue", sans-serif;
+}
+
+.navbar {
+  background-color: white;
+  height: 80px;
+}
+
+/* header的icon */
+.icon>a {
+  padding: 10px;
+  color: #666777;
+  text-decoration: none;
+
+}
+
+/* 設定漢堡框線樣式 */
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+/* 清除漢堡點選框線 */
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* 清除叉叉點選框線 */
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* 設定標籤列字體顏色 */
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+
+
+/* banner */
+.banner {
+  height: 80vh;
+  background-image: url("../views/Layout/img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 540px;
+}
+
+.input {
+  width: 560px;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: #666777;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.iconSearch {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 計數器 */
+.qty {
+  width: 40px;
+  height: 35px;
+  text-align: center;
+  border: 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+
+input.qtyplus {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+input.qtyminus {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+.qty2 {
+  width: 40px;
+  height: 35px;
+  text-align: center;
+  border: 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+input.qtyplus2 {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+input.qtyminus2 {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+
+
+/* 熱門活動的圖片 */
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  height: 30vh;
+  gap: 15px;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+
+  &:hover {
+      flex: 3;
+  }
+}
+
+.item-1 {
+  background-image: url('https://placehold.co/265x200');
+  border-radius: 10px;
+}
+
+.item-2 {
+  background-image: url('https://placehold.co/265x200');
+  border-radius: 10px;
+}
+
+.item-3 {
+  background-image: url('https://placehold.co/265x200');
+  border-radius: 10px;
+}
+
+.item-4 {
+  background-image: url('https://placehold.co/265x200');
+  border-radius: 10px;
+}
+
+/* 全部圖片設圓角 */
+img {
+  border-radius: 10px;
+}
+
+
+/* 聯絡我們icon */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #ff0000;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+/* 內頁小搜尋框 */
+.container-input2 {
+  position: relative;
+  margin-top: 10px;
+}
+
+.input2 {
+  width: 150px;
+  height: 35px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 10px;
+  border: solid 1px #333;
+  transition: all .2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input2 svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input2:focus {
+  opacity: 1;
+  width: 180px;
+}
+
+/* 愛心 */
+.ui-bookmark {
+  --icon-size: 24px;
+  --icon-secondary-color: rgb(162, 162, 162);
+  --icon-hover-color: rgb(196, 196, 196);
+  --icon-primary-color: rgb(252, 54, 54);
+  --icon-circle-border: 1px solid var(--icon-primary-color);
+  --icon-circle-size: 35px;
+  --icon-anmt-duration: 0.3s;
+}
+
+.ui-bookmark input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.ui-bookmark .bookmark {
+  width: var(--icon-size);
+  height: auto;
+  fill: var(--icon-secondary-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+
+.bookmark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+  box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  padding: 1px;
+}
+
+.bookmark::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: var(--icon-circle-border);
+  opacity: 0;
+}
+
+/* actions */
+
+.ui-bookmark:hover .bookmark {
+  fill: var(--icon-hover-color);
+}
+
+.ui-bookmark input:checked+.bookmark::after {
+  -webkit-animation: circles var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: circles var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: var(--icon-anmt-duration);
+  animation-delay: var(--icon-anmt-duration);
+}
+
+.ui-bookmark input:checked+.bookmark {
+  fill: var(--icon-primary-color);
+  -webkit-animation: bookmark var(--icon-anmt-duration) forwards;
+  animation: bookmark var(--icon-anmt-duration) forwards;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.ui-bookmark input:checked+.bookmark::before {
+  -webkit-animation: circle var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: circle var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: var(--icon-anmt-duration);
+  animation-delay: var(--icon-anmt-duration);
+}
+
+@-webkit-keyframes bookmark {
+  50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+  }
+
+  100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+  }
+}
+
+@keyframes bookmark {
+  50% {
+      -webkit-transform: scaleY(0.6);
+      transform: scaleY(0.6);
+  }
+
+  100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes circle {
+  from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+
+  90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes circle {
+  from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+
+  90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@-webkit-keyframes circles {
+  from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+
+  40% {
+      opacity: 1;
+  }
+
+  to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+  }
+}
+
+@keyframes circles {
+  from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+
+  40% {
+      opacity: 1;
+  }
+
+  to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+  }
+}
+
+/* 地圖 */
+.map{
+  height: 25vh;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h4>a{
+color: #000000;
+  text-decoration: none;
+}
+h4>a:hover{
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #878787;
+  color: white;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+/* ------------------------------------contact */
+.contact h1{
+  margin-top: 30px;
+}
+.contactp{
+  margin-top: 20px;
+}
+.contact input{
+  width: 100%;
+  font-size: 20px;
+  border: 1px solid #000;
+}
+option{
+  font-size: 20px;
+}
+.contact textarea{
+  width: 100%;
+  border: 1px solid #000;
+}
+.contact label{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contact button{
+  width: 100%;
+  background: gray;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+}
+.card-body .product-context{
+  margin-left: 15px;
+}
+
+.card-body>a{
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.card-body>a:hover{
+  text-decoration: underline;
+}
