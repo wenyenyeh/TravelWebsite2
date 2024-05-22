@@ -7,7 +7,7 @@ import Layout from '@/views/Layout/index.vue'
 import Category from '@/views/Category/index.vue'
 import Home from '@/views/Home/index.vue'
 import About from '@/views/Layout/about.vue'
-
+import CartList from '@/views/CartList/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,7 +30,11 @@ const router = createRouter({
     },{//單一產品頁面
       path:'/category',
           component: Category
+    },{//購物車頁面
+      path:'/CartList',
+          component: CartList
     },
+
 
   ]
 })
