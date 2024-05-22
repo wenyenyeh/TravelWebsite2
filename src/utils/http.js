@@ -22,4 +22,5 @@ httpInstance.interceptors.response.use(res=>res.data,e => {
 
 //將他匯出
 export default httpInstance
+// export default axios
 
